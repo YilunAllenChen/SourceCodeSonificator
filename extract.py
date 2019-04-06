@@ -37,4 +37,4 @@ def extract(fileName):  #returns a map in form: num_of_line: [keyword1, keyword2
     file.close()
     export.close()
     return Hmap
-extract("./Grep.java")
+# extract("./Grep.java")

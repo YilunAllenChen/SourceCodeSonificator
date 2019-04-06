@@ -1,6 +1,7 @@
 import random
 from psonic import *
-from threading import Thread
+from multiprocessing import Process
+from extract import extract
 
 extensionBeatMap = {
     "java": [0.5, 0.5, 1],
@@ -9,19 +10,62 @@ extensionBeatMap = {
     "py": [0.25, 0.125, 0.125, 0.25, 0.25, 1.25]
 }
 
-def composer(extension):
-    drumsThread = Thread(target=drums, args=(extensionBeatMap[extension],))
-    drumsThread.start()
+def guitar(rootNote, quality):
+    use_synth(PLUCK)
+    c = chord(rootNote, quality)
+    while True:
+        s = random.choice([0.125,0.25,0.5])
+        r = random.choice([0.125, 0.25, 1, 2])
+        play(c, release = r)
+        sleep(s)
+
+def piano(rootNote, quality):
+    use_synth(PIANO)
+    c = chord(rootNote, quality)
+    while True:
+        s = random.choice([0.125,0.25,0.5])
+        r = random.choice([0.125, 0.25, 1, 2])
+        play(c, release = r)
+        sleep(s)
 
 def guitar(rootNote, quality):
     use_synth(PLUCK)
     c = chord(rootNote, quality)
     while True:
         s = random.choice([0.125,0.25,0.5])
-        for i in range(8):
-            r = random.choice([0.125, 0.25, 1, 2])
-            play(c, release = r)
-            sleep(s)
+        r = random.choice([0.125, 0.25, 1, 2])
+        play(c, release = r)
+        sleep(s)
+
+keywordFuncMap = {
+    "in": guitar,
+    # "while":
+    # "if":
+    # "else":
+    # "class":
+    # "def":
+}
+
+def composer(extension, keywords):
+    drumsProcess = Process(target=drums, args=(extensionBeatMap[extension],))
+    drumsProcess.start()
+    
+    keyList = [*keywords]
+    keyList.sort()
+    for i in keyList:
+        word = keywords[i]
+        if "in" in word:
+            guitarProcess = Process(target=keywordFuncMap["in"], args=(E3, MAJOR))
+            guitarProcess.start()
+            sleep(0.25)
+            guitarProcess.terminate()
+        
+        # if 
+        
+        
+    
+
+
 
 def drums(sleepTime):
     while True:
@@ -29,15 +73,15 @@ def drums(sleepTime):
             sample(DRUM_BASS_HARD, rate=0.5, amp=0.5)
             sleep(i)
 
-# drumsThread = Thread(target=drums, args=([0.25, 0.125, 0.125],))
-# guitarThread = Thread(target=guitar, args=(E3, MAJOR))
-# guitarThread2 = Thread(target=guitar, args=(G3, MAJOR))
-# guitarThread3 = Thread(target=guitar, args=(C3, MAJOR))
+# drumsProcess = Process(target=drums, args=([0.25, 0.125, 0.125],))
+# guitarProcess = Process(target=guitar, args=(E3, MAJOR))
+# guitarProcess2 = Process(target=guitar, args=(G3, MAJOR))
+# guitarProcess3 = Process(target=guitar, args=(C3, MAJOR))
 
-# drumsThread.start()
-# guitarThread.start()
-# guitarThread2.start()
+# drumsProcess.start()
+# guitarProcess.start()
+# guitarProcess2.start()
 
-composer("cpp")
+composer("java", extract("./Grep.java"))
 while True:
     pass

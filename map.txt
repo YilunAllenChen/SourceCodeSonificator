@@ -1,16 +1,16 @@
-2: None, as, or, in
-3: None, import, or
-4: None, import, or
-5: None, import, or
-6: None, import, or
-9: None, if, as, for, or, in
+2: None, or, as, in
+3: None, or, import
+4: None, or, import
+5: None, or, import
+6: None, or, import
+9: None, for, or, if, as, in
 10: None, or
 12: None, or
-15: None, as, class
+15: None, class, as
 18: None, in
-20: None, as, pass, in
+20: None, pass, as, in
 22: None, in
-24: None, if, except, not
+24: None, except, if, not
 26: None, not, in
 27: None, or, in
 28: None, or, in
@@ -27,55 +27,55 @@
 50: None, in
 51: None, if
 56: None, in
-61: None, or, and
+61: None, and, or
 63: None, return, in
 64: None, or, in
 65: None, for, or, in
-66: None, as, is
+66: None, is, as
 68: None, in
 69: None, in
-70: None, if, is, or
+70: None, is, or, if
 71: None, is, in
 72: None, for, is, or, in
 73: None, is, in
 74: None, is, in
 75: None, if
 76: None, in
-79: None, if, else, is
+79: None, else, is, if
 80: None, in
 81: None, if, in
 82: None, return, in
 85: None, return, in
-89: None, or, and
+89: None, and, or
 91: None, return, in
 92: None, or, in
 93: None, for, or, in
 97: None, with, in
-99: None, return, is, in
+99: None, is, return, in
 101: None, or, in
 102: None, for, or, in
-103: None, as, is
+103: None, is, as
 105: None, in
 106: None, in
 107: None, try
 108: None, for, or, in
-110: None, if, is
+110: None, is, if
 112: None, in
-113: None, as, while
+113: None, while, as
 114: None, is, in
 115: None, if
-116: None, if, is, in
+116: None, is, if, in
 117: None, is, in
 118: None, in
 120: None, else
-121: None, as, is, in
+121: None, is, as, in
 122: None, as, in
-123: None, if, is, in
+123: None, is, if, in
 124: None, is, in
 125: None, in
 133: None, in
 135: None, in
-138: None, if, is
+138: None, is, if
 139: None, return
 140: None, else
 141: None, return
