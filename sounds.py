@@ -59,11 +59,12 @@ instruments = [guitar, piano, bell]
 def composer(extension, keywords):
     drumsProcess = Process(target=drums, args=(extensionBeatMap[extension],))
     drumsProcess.start()
-    chorus = len(keywords)%3
+    chorus = (2+len(keywords))%3
     keyList = [*keywords]
+    total = keyList[-1]
     for i in keyList:
         word = keywords[i]
-        print(i)
+        print("Progress: " + str(int(i)/int(total) * 100)[0:4] + "%")
         for j in range(len(allKeywords)):
             if allKeywords[j] in word:
                 process = Process(target=instruments[j%3], args=(generateNote(chorus),))
@@ -71,7 +72,7 @@ def composer(extension, keywords):
                 process.start() 
                 sleep(2)
         size = processQueue.qsize()
-        for i in range (math.ceil(size/(3 if size > 5 else 4))):
+        for i in range (math.ceil(size/(2 if size > 4 else 3))):
             if not processQueue.empty():
                 current = processQueue.get()
                 current.terminate()
@@ -83,7 +84,10 @@ def drums(sleepTime):
             sample(DRUM_BASS_HARD, amp=1.5, rate=0.5)
             sleep(i)
 
+filepath = input("Please enter file path: ")
 
-composer("java", extract("Grep.java"))
+extension = filepath.split('.')[-1]
+
+composer(extension, extract(filepath))
 while True:
     pass
