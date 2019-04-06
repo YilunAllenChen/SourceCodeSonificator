@@ -5,9 +5,4 @@ javaList = { "abstract","assert","boolean","break","byte","case","catch","char",
 cList = {"auto","else","long","switch","break","enum","register","typedef","case","extern","return","union","char","float","short","unsigned","const","for","signed","void","continue","goto","sizeof","volatile","default","if","static","while","do","int","struct","_Packed","double"}
 
 
-
-
-
-
-pythonList.union(javaList,cList)
-allKW = list(pythonList)
+allKW = list(pythonList.union(javaList, cList))
