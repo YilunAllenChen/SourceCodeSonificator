@@ -14,10 +14,14 @@ extensionBeatMap = {
 }
 
 
-def generateNote():
+def generateNote(chorus):
     res = []
+    list1 = [C2,C3,C4,D3,D4,E2,E3,E4,F3,G2,G3,G4,A2,A3,A4,B3]
+    list2 = [Cs2,Cs3,Cs4,F2,F3,F4,Gs2,Gs3,Gs4,C2,C3,C4,]
+    list3 = [Ab2,Ab3,Ab4,B2,B3,B4,Eb2,Eb3,Eb4,Gb2,Gb3,Gb4]
+    lists = [list1,list2,list3]
     for i in range(random.choice(range(2, 8))):
-        res.append(random.choice([C2,C3,C4,D3,D4,E2,E3,E4,F3,G2,G3,G4,A2,A3,A4,B3]))
+        res.append(random.choice(lists[chorus]))
     return res
 
 processQueue = queue.Queue()
@@ -55,36 +59,17 @@ instruments = [guitar, piano, bell]
 def composer(extension, keywords):
     drumsProcess = Process(target=drums, args=(extensionBeatMap[extension],))
     drumsProcess.start()
-    
+    chorus = len(keywords)%3
     keyList = [*keywords]
     for i in keyList:
         word = keywords[i]
         print(i)
         for j in range(len(allKeywords)):
             if allKeywords[j] in word:
-                process = Process(target=instruments[j%3], args=(generateNote(),))
+                process = Process(target=instruments[j%3], args=(generateNote(chorus),))
                 processQueue.put(process)
-                process.start()
-                
+                process.start() 
                 sleep(2)
-            
-
-
-        # if "if" in word:
-        #     guitarProcess = Process(target=keywordFuncMap["in"], args=([C3, E3, G3],))
-        #     processQueue.put(guitarProcess)
-        #     guitarProcess.start()
-        #     sleep(2)
-        # if "as" in word:
-        #     guitarProcess = Process(target=keywordFuncMap["in"], args=([C2],))
-        #     processQueue.put(guitarProcess)
-        #     guitarProcess.start()
-        #     sleep(0.5)
-        # if "in" in word:
-        #     guitarProcess = Process(target=piano, args=(C3, MAJOR))
-        #     guitarProcess.start()
-        #     sleep(0.75)
-        #     guitarProcess.terminate()
         size = processQueue.qsize()
         for i in range (math.ceil(size/(3 if size > 5 else 4))):
             if not processQueue.empty():
@@ -99,6 +84,6 @@ def drums(sleepTime):
             sleep(i)
 
 
-composer("py", extract("/Users/h339667/Documents/fixit/fixitmobile/app/src/main/java/com/honeywell/fixit/PastRequests.java"))
+composer("java", extract("Grep.java"))
 while True:
     pass

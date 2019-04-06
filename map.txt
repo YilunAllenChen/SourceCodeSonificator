@@ -1,115 +1,91 @@
-1: None, package
-3: None, import, or, and
-4: None, import, or, and
-5: None, import, or, and
-6: None, import, or, and
-7: None, import, or, and
-8: None, import, or, and, not
-9: None, import, in, or, and
-10: None, import, in, or, and
-11: None, import, or, and
-12: None, import, or, and
-13: None, import, or, and
-14: None, import, in, or, and
-15: None, import, or, and
-16: None, import, or, and, as
-17: None, import, or, and
-18: None, import, or, and
-19: None, import, or, and
-20: None, import, or, and
-21: None, import, or, and, as
-23: None, import, or, is, and, as
-24: None, import, or, is, and, as
-25: None, import, or, and, as
-26: None, import, or, as
-27: None, import, or, as
-28: None, import, or, as
-29: None, import, or, as
-30: None, import, or, as
-31: None, import, or, as
-32: None, import, or, as
-33: None, import, or, as
-34: None, import, or, as
-36: None, import, or
-38: None, public, class, extends, as
-39: None, private, as
-40: None, private, in, as
-41: None, private, as
-42: None, private, or, as
-43: None, private, in, default, def
-44: None, private, in
-45: None, boolean, private, as
-48: None, void, protected
-49: None, super
-50: None, as
-51: None, as
-52: None, or, as
-54: None, in
-55: None, or
-57: None, in, as
-58: None, new, is, as
-60: None, public, void
-61: None, new, class, as
-62: None, or
-66: None, in, as
-70: None, public, void
-71: None, super
-72: None, in, default, as, def
-74: None, in, final
-75: None, do, new, is
-77: None, public, void, as
-78: None, is, if, as
-79: None, do, as
-80: None, do, is, if
-81: None, do
-82: None, do, in
-83: None, if
-84: None, default, as, def
-85: None, do, in, if
-86: None, in, or, as
-87: None, or
-88: None, as
-89: None, as
-90: None, else
-91: None, as
-93: None, else
-94: None, default, as, def
-95: None, in, or, as
-96: None, or
-97: None, as
-98: None, as
-104: None, new, is
-106: None, public, void, as
-107: None, is, if, as
-108: None, is, if, as
-109: None, default, as, def
-110: None, return
-112: None, as
-113: None, as
-114: None, do, or, as, for
-115: None, do, is, as
-117: None, if, as
-118: None, default, as, def
+2: None, in, or, as
+3: None, or, import
+4: None, or, import
+5: None, or, import
+6: None, or, import
+9: None, if, in, or, for, as
+10: None, or
+12: None, or
+15: None, public, as, class
+18: None, in
+20: None, in, pass, as
+22: None, throw, in, public, static, void, throws
+24: None, throw, if, not, except, throws
+25: None, new
+26: None, in, not
+27: None, in, or
+28: None, in, or
+29: None, if
+30: None, int, in
+31: None, throw
+34: None, if
+35: None, int, in
+36: None, throw
+39: None, in
+40: None, new
+41: None, boolean
+42: None, in
+43: None, if
+45: None, in
+46: None, if
+47: None, new
+49: None, else
+50: None, in
+51: None, if
+52: None, new
+56: None, int, in
+61: None, and, or
+63: None, in, return
+64: None, in, or
+65: None, in, or, for
+66: None, case, is, as, this
+68: None, in, public, static, boolean
+69: None, int, in, new
+70: None, if, or, is
+71: None, in, is
+72: None, in, or, for, is, this
+73: None, in, is, new, this
+74: None, in, is, this
+75: None, if
+76: None, int, in
+79: None, if, else, is
+80: None, int, in
+81: None, int, if, in
+82: None, int, in, return
+85: None, int, in, return
+89: None, and, or
+91: None, in, return
+92: None, in, or
+93: None, in, or, for
+97: None, in, with
+99: None, in, is, return, this
+101: None, in, or
+102: None, in, or, for
+103: None, case, is, as, this
+105: None, in, public, static, boolean
+106: None, in, new
+107: None, try
+108: None, int, in, or, for
+110: None, if, is
+111: None, new
+112: None, int, in
+113: None, while, as
+114: None, in, is, this
+115: None, if
+116: None, if, in, is, this
+117: None, int, in, is, new, this
+118: None, int, in
 120: None, else
-121: None, default, as, def
-122: None, do, in, or, as
-132: None, private, in, final, void, is, as
-133: None, in, if
-134: None, return
-137: None, as
-138: None, in, or
-139: None, in
-140: None, do
-142: None, new, is
-144: None, public, void, as
-145: None, is, if, as
-146: None, as
-147: None, is, if
-149: None, in, byte, as
-150: None, in, or
-152: None, in
-153: None, or
-161: None, in, new
-164: None, new
-166: None, as
-167: None, as
+121: None, in, is, as, this
+122: None, in, as
+123: None, if, in, is, this
+124: None, int, in, is, new, this
+125: None, int, in
+132: None, catch
+133: None, int, in
+134: None, catch
+135: None, int, in
+138: None, if, is
+139: None, return
+140: None, else
+141: None, return
