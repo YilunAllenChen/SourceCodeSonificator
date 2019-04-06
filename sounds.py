@@ -1,4 +1,5 @@
 import random
+import queue
 from psonic import *
 from multiprocessing import Process
 from extract import extract
@@ -10,32 +11,31 @@ extensionBeatMap = {
     "py": [0.25, 0.125, 0.125, 0.25, 0.25, 1.25]
 }
 
-def guitar(rootNote, quality):
-    use_synth(PLUCK)
-    c = chord(rootNote, quality)
-    while True:
-        s = random.choice([0.125,0.25,0.5])
-        r = random.choice([0.125, 0.25, 1, 2])
-        play(c, release = r)
-        sleep(s)
+processQueue = queue.Queue()
 
-def piano(rootNote, quality):
-    use_synth(PIANO)
-    c = chord(rootNote, quality)
-    while True:
-        s = random.choice([0.125,0.25,0.5])
-        r = random.choice([0.125, 0.25, 1, 2])
-        play(c, release = r)
-        sleep(s)
-
-def guitar(rootNote, quality):
+def guitar(noteList):
     use_synth(PLUCK)
-    c = chord(rootNote, quality)
     while True:
-        s = random.choice([0.125,0.25,0.5])
         r = random.choice([0.125, 0.25, 1, 2])
-        play(c, release = r)
-        sleep(s)
+        play_pattern_timed(noteList, 0.5, release=r)
+
+# def piano(rootNote, quality):
+#     use_synth(PIANO)
+#     c = chord(rootNote, quality)
+#     while True:
+#         s = random.choice([0.125,0.25,0.5])
+#         r = random.choice([0.125, 0.25, 1, 2])
+#         play(c, release = r)
+#         sleep(s)
+
+# def guitar(rootNote, quality):
+#     use_synth(PLUCK)
+#     c = chord(rootNote, quality)
+#     while True:
+#         s = random.choice([0.125,0.25,0.5])
+#         r = random.choice([0.125, 0.25, 1, 2])
+#         play(c, release = r)
+#         sleep(s)
 
 keywordFuncMap = {
     "in": guitar,
@@ -48,20 +48,33 @@ keywordFuncMap = {
 
 def composer(extension, keywords):
     drumsProcess = Process(target=drums, args=(extensionBeatMap[extension],))
-    drumsProcess.start()
+    # drumsProcess.start()
     
     keyList = [*keywords]
     keyList.sort()
     for i in keyList:
         word = keywords[i]
-        if "in" in word:
-            guitarProcess = Process(target=keywordFuncMap["in"], args=(E3, MAJOR))
+        if "if" in word:
+            guitarProcess = Process(target=keywordFuncMap["in"], args=([C3, E3, G3],))
+            processQueue.put(guitarProcess)
             guitarProcess.start()
-            sleep(0.25)
-            guitarProcess.terminate()
-        
+            sleep(2)
+        if "None" in word:
+            guitarProcess = Process(target=keywordFuncMap["in"], args=([C2],))
+            processQueue.put(guitarProcess)
+            guitarProcess.start()
+            sleep(0.5)
+        # if "while" in word:
+        #     guitarProcess = Process(target=piano, args=(C3, MAJOR))
+        #     guitarProcess.start()
+        #     sleep(0.75)
+        #     guitarProcess.terminate()
         # if 
-        
+        for i in range (2):
+            if not processQueue.empty():
+                current = processQueue.get()
+                current.terminate()
+
         
     
 
@@ -70,7 +83,7 @@ def composer(extension, keywords):
 def drums(sleepTime):
     while True:
         for i in sleepTime:
-            sample(DRUM_BASS_HARD, rate=0.5, amp=0.5)
+            sample(DRUM_BASS_HARD, rate=0.5)
             sleep(i)
 
 # drumsProcess = Process(target=drums, args=([0.25, 0.125, 0.125],))

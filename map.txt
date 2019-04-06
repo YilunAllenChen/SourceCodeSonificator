@@ -1,19 +1,19 @@
-2: None, or, as, in
+2: None, in, or, as
 3: None, or, import
 4: None, or, import
 5: None, or, import
 6: None, or, import
-9: None, for, or, if, as, in
+9: None, in, or, for, as, if
 10: None, or
 12: None, or
-15: None, class, as
+15: None, as, class
 18: None, in
-20: None, pass, as, in
+20: None, in, as, pass
 22: None, in
-24: None, except, if, not
-26: None, not, in
-27: None, or, in
-28: None, or, in
+24: None, not, if, except
+26: None, in, not
+27: None, in, or
+28: None, in, or
 29: None, if
 30: None, in
 34: None, if
@@ -27,55 +27,55 @@
 50: None, in
 51: None, if
 56: None, in
-61: None, and, or
-63: None, return, in
-64: None, or, in
-65: None, for, or, in
-66: None, is, as
+61: None, or, and
+63: None, in, return
+64: None, in, or
+65: None, in, or, for
+66: None, as, is
 68: None, in
 69: None, in
-70: None, is, or, if
-71: None, is, in
-72: None, for, is, or, in
-73: None, is, in
-74: None, is, in
+70: None, or, if, is
+71: None, in, is
+72: None, in, or, for, is
+73: None, in, is
+74: None, in, is
 75: None, if
 76: None, in
-79: None, else, is, if
+79: None, else, if, is
 80: None, in
-81: None, if, in
-82: None, return, in
-85: None, return, in
-89: None, and, or
-91: None, return, in
-92: None, or, in
-93: None, for, or, in
-97: None, with, in
-99: None, is, return, in
-101: None, or, in
-102: None, for, or, in
-103: None, is, as
+81: None, in, if
+82: None, in, return
+85: None, in, return
+89: None, or, and
+91: None, in, return
+92: None, in, or
+93: None, in, or, for
+97: None, in, with
+99: None, in, return, is
+101: None, in, or
+102: None, in, or, for
+103: None, as, is
 105: None, in
 106: None, in
 107: None, try
-108: None, for, or, in
-110: None, is, if
+108: None, in, or, for
+110: None, if, is
 112: None, in
-113: None, while, as
-114: None, is, in
+113: None, as, while
+114: None, in, is
 115: None, if
-116: None, is, if, in
-117: None, is, in
+116: None, in, if, is
+117: None, in, is
 118: None, in
 120: None, else
-121: None, is, as, in
-122: None, as, in
-123: None, is, if, in
-124: None, is, in
+121: None, in, as, is
+122: None, in, as
+123: None, in, if, is
+124: None, in, is
 125: None, in
 133: None, in
 135: None, in
-138: None, is, if
+138: None, if, is
 139: None, return
 140: None, else
 141: None, return
