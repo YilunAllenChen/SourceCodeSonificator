@@ -1,91 +1,81 @@
 2: None, as, in, or
-3: None, import, or, import
-4: None, import, or, import
-5: None, import, or, import
-6: None, import, or, import
-9: None, as, for, if, in, or, for, if, for, if
+3: None, import, or
+4: None, import, or
+5: None, import, or
+6: None, import, or
+9: None, as, in, if, for, or
 10: None, or
 12: None, or
-15: None, as, class, class, public
+15: None, as, class
 18: None, in
 20: None, as, in, pass
-22: None, in, public, static, throw, throws, void, void, static
-24: None, except, if, not, if, throw, throws, if
-25: None, new
+22: None, in
+24: None, if, except, not
 26: None, in, not
 27: None, in, or
 28: None, in, or
-29: None, if, if, if
-30: None, in, print, int, int
-31: None, throw
-34: None, if, if, if
-35: None, in, print, int, int
-36: None, throw
+29: None, if
+30: None, in, print
+34: None, if
+35: None, in, print
 39: None, in
-40: None, new
-41: None, boolean
 42: None, in
-43: None, if, if, if
+43: None, if
 45: None, in
-46: None, if, if, if
-47: None, new
-49: None, else, else, else
+46: None, if
+49: None, else
 50: None, in
-51: None, if, if, if
-52: None, new
-56: None, in, print, int, int
+51: None, if
+56: None, in, print
 61: None, and, or
-63: None, in, return, return, return
+63: None, in, return
 64: None, in, or
-65: None, for, in, or, for, for
-66: None, as, is, case, this, case
-68: None, in, boolean, public, static, static
-69: None, in, int, new, int
-70: None, if, is, or, if, if
-71: None, in, is
-72: None, for, in, is, or, for, this, for
-73: None, in, is, new, this
-74: None, in, is, this
-75: None, if, if, if
-76: None, in, int, int
-79: None, else, if, is, else, if, else, if
-80: None, in, int, int
-81: None, if, in, if, int, if, int
-82: None, in, return, int, return, return, int
-85: None, in, return, int, return, return, int
+65: None, in, for, or
+66: None, is, as
+68: None, in
+69: None, in
+70: None, is, if, or
+71: None, is, in
+72: None, is, in, for, or
+73: None, is, in
+74: None, is, in
+75: None, if
+76: None, in
+79: None, is, if, else
+80: None, in
+81: None, in, if
+82: None, in, return
+85: None, in, return
 89: None, and, or
-91: None, in, return, return, return
+91: None, in, return
 92: None, in, or
-93: None, for, in, or, for, for
+93: None, in, for, or
 97: None, in, with
-99: None, in, is, return, return, this, return
+99: None, is, in, return
 101: None, in, or
-102: None, for, in, or, for, for
-103: None, as, is, case, this, case
-105: None, in, boolean, public, static, static
-106: None, in, new
-107: None, try, try
-108: None, for, in, or, print, for, int, for, int
-110: None, if, is, if, if
-111: None, new
-112: None, in, int, int
-113: None, as, while, while, while
-114: None, in, is, this
-115: None, if, if, if
-116: None, if, in, is, if, this, if
-117: None, in, is, int, new, this, int
-118: None, in, int, int
-120: None, else, else, else
-121: None, as, in, is, this
+102: None, in, for, or
+103: None, is, as
+105: None, in
+106: None, in
+107: None, try
+108: None, in, for, print, or
+110: None, is, if
+112: None, in
+113: None, as, while
+114: None, is, in
+115: None, if
+116: None, is, in, if
+117: None, is, in
+118: None, in
+120: None, else
+121: None, is, as, in
 122: None, as, in
-123: None, if, in, is, if, this, if
-124: None, in, is, int, new, this, int
-125: None, in, int, int
-132: None, catch
-133: None, in, print, int, int
-134: None, catch
-135: None, in, print, int, int
-138: None, if, is, if, if
-139: None, return, return, return
-140: None, else, else, else
-141: None, return, return, return
+123: None, is, in, if
+124: None, is, in
+125: None, in
+133: None, in, print
+135: None, in, print
+138: None, is, if
+139: None, return
+140: None, else
+141: None, return
