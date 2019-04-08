@@ -5,12 +5,12 @@
 
 Team Memebers: 
 * Yinlun (Allen) Chen:
-    <https://github.com/YilunAllenChen>
-    allenchen@gatech.edu
+  * <https://github.com/YilunAllenChen>
+  * allenchen@gatech.edu
 
 * Rosemary Wang
-    <https://github.com/RosemaryW>
-    s672wang@uwaterloo.ca
+  * <https://github.com/RosemaryW>
+  * s672wang@uwaterloo.ca
 
 Current master contains all the work done on Apr 5 and Apr 6, 2019 for the Horizon Hackathon. We look forward to adding more features to existing product.
 
