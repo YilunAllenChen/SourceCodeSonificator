@@ -1,7 +1,7 @@
 # SourceCodeSonificator
 2019 Georgia Tech Horizon Hackathon
 
-#### Ranked top 3! Thank you for the support!
+**Ranked top 3! Thank you for the support!**
 
 Team Memebers: 
 * Yilun (Allen) Chen:
@@ -12,7 +12,9 @@ Team Memebers:
   * <https://github.com/RosemaryW>
   * s672wang@uwaterloo.ca
 
-Current master contains all the work done on Apr 5 and Apr 6, 2019 for the Horizon Hackathon. We look forward to adding more features to existing product.
+This project can turn your source code into a piece of music. Supporting .java, .py, .cpp, and .c at the moment.
+
+Current master branch contains all the work done on Apr 5 and Apr 6, 2019 for the Horizon Hackathon. We look forward to adding more features to existing product.
 
 Feel free to create issues, open PRs, and/or send us emails.
 
