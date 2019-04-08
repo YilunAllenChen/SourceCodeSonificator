@@ -62,9 +62,12 @@ def composer(extension, keywords):
     chorus = (2+len(keywords))%3
     keyList = [*keywords]
     total = keyList[-1]
+    print("Composing now...")
+
     for i in keyList:
         word = keywords[i]
         print("Progress: " + str(int(i)/int(total) * 100)[0:4] + "%")
+
         for j in range(len(allKeywords)):
             if allKeywords[j] in word:
                 process = Process(target=instruments[j%3], args=(generateNote(chorus),))

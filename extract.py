@@ -27,14 +27,14 @@ def extract(fileName):  #returns a map in form: num_of_line: [keyword1, keyword2
         lineList.append(int(item))
 
     #export into a file called "map.txt"
-    export = open("map.txt","w")
-    for i in sorted(lineList):
-        export.write(str(i) + ": " + Hmap[str(i)] + "\n")
+    # export = open("map.txt","w")
+    # for i in sorted(lineList):
+    #     export.write(str(i) + ": " + Hmap[str(i)] + "\n")
         
 
 
     #close all files to complete writing.        
     file.close()
-    export.close()
+    # export.close()
     return Hmap
 # extract("./Grep.java")
