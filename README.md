@@ -1,10 +1,10 @@
 # SourceCodeSonificator
 2019 Georgia Tech Horizon Hackathon
 
-**Ranked top 3! Thank you for the support!**
+#### Ranked top 3! Thank you for the support!
 
 Team Memebers: 
-* Yinlun (Allen) Chen:
+* Yilun (Allen) Chen:
   * <https://github.com/YilunAllenChen>
   * allenchen@gatech.edu
 
